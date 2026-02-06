@@ -39,7 +39,7 @@ And launch the attack:
 python3 crowbar.py -b rdp -u user_name -C passwords.txt -s 192.168.10.100/32
 ```
 ## Results :
-[!Alt text](../../images/attack1.png)
+<img width="1920" height="1080" alt="Honeypot STEPS" src="/images/attack1.png" />
 
 # Audit with Splunk
 Splunk is a SIEM tool that centralise logs for every DC machine.
@@ -49,8 +49,7 @@ Steps :
 - We go to Search & Reporting
 - We search for our machines with : index="endpoint" user_name, with the last 15 min research
 - We look for EventCode, and we click on it
-
-[!Alt text](/images/logs1.png)
+<img width="1920" height="1080" alt="Honeypot STEPS" src="/images/logs1.png" />
 
 ### EventCode Explanation :
 In Windows Auditing, EventCode (often called Event ID) is an identifier that tells you what kind of security event happened
@@ -58,5 +57,5 @@ In this case, we have EventCode=4625, with 22 Count, that tells An account faile
 
 - We click for more details, and we look for the ip @:
 
-[!Alt text](../images/analyse1.png)
+<img width="1920" height="1080" alt="Honeypot STEPS" src="/images/analyse1.png" />
 And thats is the Attacker ip @.
