@@ -35,9 +35,6 @@ sudo hashcat -m 5600 hash.txt passwords.txt
 
 explanation of NTLMv2: used in Windows Auth, when accessing SMG, LDAP, HTTP, its main purpose is to prove your identity
 
-- In splunk, we can see this :
-<img width="1920" height="1080" alt="Attack2 STEPS" src="/images/Scenario2/A5.png"/>
-
 **Best Practices :**
 
 - Disable LLMNR and NTBS-NS to rely only in DNS 
