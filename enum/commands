@@ -1,0 +1,8 @@
+nmap -Pn -sV -p- ip_dc
+
+crackmapexec smb ip_dc
+
+## for smb enum
+
+nmblookup -A ip_dc
+
