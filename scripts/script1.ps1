@@ -2,8 +2,6 @@ Set-ADAccountPassword sophie -Reset -NewPassword (Read-Host -AsSecureString -Pro
 # to see the name of the domain controller 
 (Get-CimInstance Win32_ComputerSystem).Domain
 
-Get-PSSession -computerame 
-
 # To see the name of your laptop in case the access is denied
 hostname
 
@@ -16,22 +14,12 @@ Get-ADComputer -Filter *
 #List all groups
 Get-ADGroup -Filter *
 
+# have some details about a user
+net user username /domain
+
 # show env variables including userdomain and username
 set
 
-Get-Command *aduser
-Get-Command *adcomputer
-Get-Command *adgroup
 
-# Create a new AD user :
-New-ADUser -SamAccountName <username> -GivenName <name> -Surname <lastname> -UserPrincipalName (Read-Host -AsSecureString "Enter the password") -Enabled $true
 
-# To change ADUSer info :
-Set-ADUser <user_name> -GivenName <new_givenname>
-
-#
-Search-ADAccount -LockedOut
-Unlock-ADAccount jdoe
-
-# DNS, DHCP, Group Policy and Basic AD tools
 
